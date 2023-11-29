@@ -1,5 +1,7 @@
 # Pomodoro Timer Project
 
+[Click here](https://fokus-pomodoro-timer.vercel.app/) to visit the Fokus Pomodoro Timer.
+
 ## Overview
 
 This Pomodoro Timer project is a simple web application that helps users manage their time using the Pomodoro Technique. 
