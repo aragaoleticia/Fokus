@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
-    gap: 0.8rem;
+    gap: 0.3rem;
 }
 
 .app__form-footer__button--confirm {
@@ -511,6 +511,11 @@ h1, h2, h3, h4, h5, h6 {
     .app__section-active-task {
         gap: 2rem;
     }
+    .app__form-footer {
+        gap: 0.4rem;
+
+    }
+
 }
 
 .hidden {
