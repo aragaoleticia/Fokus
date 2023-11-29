@@ -66,7 +66,7 @@ buttonsList.forEach(button => {
 
 const countDown = () => {
     if(secondsTimer <= 0){
-        // soundBeep.play();
+        soundBeep.play();
         stopCounter();
         reset();
         const focoAtivo = html.getAttribute('data-contexto') === 'foco'
@@ -106,8 +106,7 @@ function startAndPause(){
 
 function stopCounter(){
     clearInterval(timerBreak);
-    timerBreak = null;
-    soundBeep.play();  
+    timerBreak = null; 
     startOrPauseButton.textContent = 'Start';
     imgPause.src = '/imagens/play_arrow.png';
 
