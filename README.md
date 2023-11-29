@@ -1,6 +1,7 @@
 # Pomodoro Timer Project
 
-[Click here](https://fokus-pomodoro-timer.vercel.app/) to visit the Fokus Pomodoro Timer.
+<a href="https://fokus-pomodoro-timer.vercel.app/" target="_blank">Click here</a> to visit the Fokus Pomodoro Timer.
+
 
 ## Overview
 
