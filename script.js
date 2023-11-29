@@ -63,7 +63,7 @@ buttonsList.forEach(button => {
 });
 
 
-
+//git commit //
 
 const countDown = () => {
     if(secondsTimer <= 0){
