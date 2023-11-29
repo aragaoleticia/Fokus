@@ -63,7 +63,6 @@ buttonsList.forEach(button => {
 });
 
 
-//git commit //
 
 const countDown = () => {
     if(secondsTimer <= 0){
@@ -107,7 +106,8 @@ function startAndPause(){
 
 function stopCounter(){
     clearInterval(timerBreak);
-    timerBreak = null;  
+    timerBreak = null;
+    soundBeep.play();  
     startOrPauseButton.textContent = 'Start';
     imgPause.src = '/imagens/play_arrow.png';
 
