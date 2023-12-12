@@ -72,10 +72,6 @@ const countDown = () => {
         const focoAtivo = html.getAttribute('data-contexto') === 'foco'
         if (focoAtivo) {            
             var event = new CustomEvent("taskCompleted", {
-                detail: {
-                    message: "The task was completed!",
-                    time: new Date(),
-                },
                 bubbles: true,
                 cancelable: true
             });

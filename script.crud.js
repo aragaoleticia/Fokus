@@ -10,7 +10,7 @@ const cancelBtn = document.querySelector('.app__form-footer__button--cancel');
 
 const deleteBtn = document.querySelector('.app__form-footer__button--delete');
 
-const clearTaskLisk = document.querySelector('#btn-remove-completed');
+const clearConcludedTask = document.querySelector('#btn-remove-completed');
 
 const clearAlltaskList = document.querySelector('#btn-remove-all');
 
@@ -18,9 +18,7 @@ const taskActiveDescription = document.querySelector('.app__section-active-task-
 const inProgressTask = document.querySelector('.app__section-active-task-label');
 
 
-const localStorageTask = localStorage.getItem('tasks');
-let tasks = localStorageTask ? JSON.parse(localStorageTask) : [];
-
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 const taskIconSvg = `
 <svg class="app__section-task-icon-status" width="24" height="24" viewBox="0 0 24 24"
@@ -93,7 +91,7 @@ function createTask(task){
     const editIcon = document.createElement('img');
     editIcon.src = '/imagens/edit.png';
 
-    buttonSvg.appendChild(editIcon);
+    buttonSvg.append(editIcon);
 
     
     svgIcon.addEventListener('click', (event) => {
@@ -121,16 +119,16 @@ function createTask(task){
         selectTask(task, li);
     }
     
-    li.appendChild(svgIcon);
-    li.appendChild(paragrafh);
-    li.appendChild(buttonSvg);
+    li.append(svgIcon);
+    li.append(paragrafh);
+    li.append(buttonSvg);
 
     return li;
 }
 
 tasks.forEach(tarefa =>{
     const taskItem = createTask(tarefa);
-    taskListContainer.appendChild(taskItem);
+    taskListContainer.append(taskItem);
 })
 
 
@@ -168,8 +166,7 @@ const removeTasks = (justConcluded) => {
     taskActiveDescription.textContent = null;
     updateLocalStorage();
 }
-
-clearTaskLisk.addEventListener('click', () => removeTasks(true));
+clearConcludedTask.addEventListener('click', () => removeTasks(true));
 
 clearAlltaskList.addEventListener('click', () => removeTasks(false));
 
@@ -191,7 +188,7 @@ formTask.addEventListener('submit', (evento) =>{
     
     tasks.push(task);
     const taskItem = createTask(task);
-    taskListContainer.appendChild(taskItem);
+    taskListContainer.append(taskItem);
     }
     updateLocalStorage();
     clearForm();
